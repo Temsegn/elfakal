@@ -30,4 +30,4 @@ services:
       - key: DATABASE_URL
         sync: false
       - key: CORS_ORIGIN
-        sync: false
+        value: "https://elfakal.com,https://www.elfakal.com"
