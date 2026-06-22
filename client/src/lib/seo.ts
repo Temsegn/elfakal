@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { COMPANY } from "./constants";
 
 export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL || "https://elfakal.com"
+  process.env.NEXT_PUBLIC_SITE_URL || "https://elfakal.vercel.app"
 ).replace(/\/$/, "");
 
 /** Common misspellings and partial searches for the company name */

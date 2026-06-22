@@ -6,7 +6,7 @@ import {
   getNews,
 } from "@/lib/data";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://elfakal.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://elfakal.vercel.app";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const [products, services, projects, news] = await Promise.all([
