@@ -33,7 +33,7 @@ export async function loginAction(
     const cookieStore = await cookies();
 
     cookieStore.set("admin_token", data.token, {
-      httpOnly: true,
+      httpOnly: false,
       secure: process.env.NODE_ENV === "production",
       sameSite: "lax",
       path: "/",
