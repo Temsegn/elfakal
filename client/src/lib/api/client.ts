@@ -1,5 +1,4 @@
-const API_BASE =
-  process.env.NEXT_PUBLIC_API_URL || "https://elfakal.onrender.com/api/v1";
+const API_BASE = "https://elfakal.onrender.com/api/v1";
 
 export class ApiError extends Error {
   constructor(
