@@ -39,6 +39,11 @@ export const metadata: Metadata = {
   robots: HOME_METADATA.robots,
   openGraph: HOME_METADATA.openGraph,
   twitter: HOME_METADATA.twitter,
+  // Allows Bing/Yahoo to crawl without webmaster tools verification
+  other: {
+    "msvalidate.01": "elfakal-bing",
+    "rating": "general",
+  },
 };
 
 export default function RootLayout({

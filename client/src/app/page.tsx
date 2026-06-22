@@ -10,10 +10,14 @@ import News from "@/components/sections/News";
 import Trust from "@/components/sections/Trust";
 import Testimonials from "@/components/sections/Testimonials";
 import Contact from "@/components/sections/Contact";
+import FaqJsonLd from "@/components/seo/FaqJsonLd";
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
 
 export default function Home() {
   return (
     <>
+      <FaqJsonLd />
+      <BreadcrumbJsonLd items={[{ name: "Home", path: "/" }]} />
       <Hero />
       <About />
       <Industries />

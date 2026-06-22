@@ -83,6 +83,8 @@ export function buildMetadata({
   const mergedKeywords = [
     ...new Set([...keywords, ...DEFAULT_KEYWORDS.slice(0, 12)]),
   ];
+  // Use absolute URL for OG image so social crawlers can find it
+  const ogImageAbsolute = ogImage.startsWith("http") ? ogImage : absoluteUrl(ogImage);
 
   return {
     title,
@@ -91,7 +93,11 @@ export function buildMetadata({
     alternates: { canonical },
     robots: noIndex
       ? { index: false, follow: false }
-      : { index: true, follow: true, googleBot: { index: true, follow: true } },
+      : {
+          index: true,
+          follow: true,
+          googleBot: { index: true, follow: true, "max-snippet": -1, "max-image-preview": "large" },
+        },
     openGraph: {
       title: ogTitle,
       description,
@@ -99,14 +105,14 @@ export function buildMetadata({
       type,
       siteName: COMPANY.name,
       locale: "en_US",
-      images: [{ url: ogImage, alt: `${ogTitle} — Elfakal PLC` }],
+      images: [{ url: ogImageAbsolute, width: 1200, height: 630, alt: `${ogTitle} — Elfakal PLC` }],
       ...(publishedTime ? { publishedTime } : {}),
     },
     twitter: {
       card: "summary_large_image",
       title: ogTitle,
       description,
-      images: [ogImage],
+      images: [ogImageAbsolute],
     },
   };
 }
