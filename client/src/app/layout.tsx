@@ -19,6 +19,11 @@ const plusJakarta = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/images/logo-mark.png",
+    shortcut: "/images/logo-mark.png",
+  },
   title: {
     default: "Elfakal PLC | Ethiopia Import, Export & Industrial Supply",
     template: "%s | Elfakal PLC",
