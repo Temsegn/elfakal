@@ -34,13 +34,14 @@ export async function loginAction(
     const cookieStore = await cookies();
 
     cookieStore.set("admin_token", data.token, {
-      httpOnly: false,
+      httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: "lax",
       path: "/",
       maxAge: 60 * 60 * 24 * 7,
     });
 
+    // admin_user is non-sensitive display data (no token) — readable by client JS for sidebar UI
     cookieStore.set(
       "admin_user",
       JSON.stringify(data.user),

@@ -333,6 +333,5 @@ export const NAV_LINKS = [
   { href: "/industries", label: "Industries" },
   { href: "/projects", label: "Projects" },
   { href: "/news", label: "News" },
-  { href: "/certifications", label: "Certifications" },
   { href: "/contact", label: "Contact" },
 ];

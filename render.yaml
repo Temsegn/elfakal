@@ -11,6 +11,8 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
+      - key: PORT
+        value: 4000
       - key: JWT_SECRET
         generateValue: true
       - key: JWT_EXPIRES_IN
@@ -19,6 +21,10 @@ services:
         value: admin@elfakal.com
       - key: ADMIN_NAME
         value: System Admin
+      # Set these manually in the Render dashboard:
+      # ADMIN_PASSWORD  — strong password for the admin account
+      # DATABASE_URL    — your PostgreSQL connection string (e.g. from Neon)
+      # CORS_ORIGIN     — your Vercel frontend URL (e.g. https://elfakal.vercel.app)
       - key: ADMIN_PASSWORD
         sync: false
       - key: DATABASE_URL

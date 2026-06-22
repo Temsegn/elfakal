@@ -40,7 +40,7 @@ export default function LoginForm() {
               type="email"
               required
               autoComplete="username"
-              defaultValue="admin@elfakal.com"
+              
               className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue/20 focus:border-blue outline-none"
             />
           </div>
@@ -55,7 +55,7 @@ export default function LoginForm() {
               type="password"
               required
               autoComplete="current-password"
-              placeholder="Admin@123456"
+              placeholder="Enter your password"
               className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue/20 focus:border-blue outline-none"
             />
           </div>
